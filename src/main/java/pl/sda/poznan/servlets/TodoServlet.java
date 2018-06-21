@@ -40,10 +40,6 @@ public class TodoServlet extends HttpServlet {
                     .forward(req, resp);
 
         } else if (path.equals("/todo/edit")) {
-            //todo: pobrać z bazy po id
-            //todo: dodać obiekt Todo jako atrybut
-            //zwrocic widok /todo/edit.jsp
-            //wyswietlic wartosc w polach formularza (wstawic w input wartosci obiektu)
             String id = req.getParameter("id");
             TodoItem toEdit = todoService.getById(Long.parseLong(id));
             req.setAttribute("itemToEdit", toEdit);
