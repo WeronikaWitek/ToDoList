@@ -3,7 +3,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <t:wrapper>
-    <h3> Czy na pewno chcesz usunąć to zadanie?</h3>
+    <h3> Are you sure you want to delete this task? </h3>
     <dl class="dl-horizontal">
         <dt> Title:</dt>
         <dd><c:out value="${itemToDelete.title}"/></dd>
