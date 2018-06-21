@@ -28,13 +28,13 @@
         <c:choose>
             <c:when test="${sessionScope.delete_result eq true}">
                 <div class="alert alert-success">
-                    Zadanie zostało usunięte!
+                    The task has been deleted!
                     <c:remove var="delete_result"/>
                 </div>
             </c:when>
             <c:when test="${sessionScope.delete_result eq true}">
                 <div class="alert alert-warning">
-                    Wystąpił błąd podczas usuwania zadania. Wciąż jest na Twojej liście :(
+                    An error occurred while deleting the task. It's still on your list :(
                     <c:remove var="delete_result"/>
                 </div>
             </c:when>
@@ -42,7 +42,7 @@
 
         <c:if test="${sessionScope.todo_created eq true}">
             <div class="alert alert-success">
-                Lepiej bierz się do pracy, ponieważ Twoja lista się powiększyła!
+               You better get to work, because your list has increased!
             </div>
 
             <c:remove var="todo_created"/>
@@ -50,7 +50,7 @@
 
         <c:if test="${fn:length(todos) eq 0}">
             <div class="alert alert-danger">
-                Wow! Nie masz żadnych zadań do wykonania. Click <a href="/todo/create"
+                Wow! You do not have any tasks to do. Click <a href="/todo/create"
                                                                    style="font-family: 'Permanent Marker', cursive;">
                 here </a>
             </div>
